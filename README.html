@@ -1,0 +1,51 @@
+<html>
+<BODY bgcolor=" #00FF00">
+<h1>- GREEN JELLY README FILE - Dec 2003 v1.0 
+- www.green-jelly.com - <br></h1>
+
+
+This application has been tested on a windows 98 machine with a IE 5 installed<br>
+It also works on MS XP & ME & 2000 & 98SE with IE 6 & 5 <br>
+<u>Please note that this application does not fully work with netscape browsers</u>
+<br>
+If you would like to contact us about this email: <a href="mailto:info@green-jelly.com">info@green-jelly.com</A><br>
+Or vist our Website @ <a href="http://www.green-jelly.com">www.green-jelly.com</A>
+
+<BODY>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+/*
+status bar
+*/
+
+//set message:
+msg = "- Read me -";
+
+timeID = 10;
+stcnt = 16;
+wmsg = new Array(33);
+        wmsg[0]=msg;
+        blnk = "                                                               ";
+        for (i=1; i<32; i++)
+        {
+                b = blnk.substring(0,i);
+                wmsg[i]="";
+                for (j=0; j<msg.length; j++) wmsg[i]=wmsg[i]+msg.charAt(j)+b;
+        }
+
+function wiper()
+{
+        if (stcnt > -1) str = wmsg[stcnt]; else str = wmsg[0];
+        if (stcnt-- < -40) stcnt=31;
+        status = str;
+        clearTimeout(timeID);
+        timeID = setTimeout("wiper()",100);
+}
+
+wiper()
+// -->
+//  End -->
+</script>
+</Body>
+</html>
